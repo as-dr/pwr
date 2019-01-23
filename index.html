@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+
+    <!-- Viewport for responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="tachyons.css" />
+
+    <title>Prototype Web Residency</title>
+
+    <style>
+    @font-face {
+    font-family: 'GTA';
+    font-display: swap;
+    src:
+         url('fonts/GT-America-Standard-Regular.otf') format('otf'),
+         url('fonts/GT-America-Standard-Regular.ttf') format('ttf'),
+         url('fonts/GT-America-Standard-Regular.woff') format('woff'),
+         url('fonts/GT-America-Standard-Regular.woff2') format('woff2');
+    }
+
+    @font-face {
+    font-family: 'Favorit';
+    font-display: swap;
+    src:
+         url('fonts/favorit-regular.woff2') format('woff2'), /* Pretty Modern Browsers */
+         url('fonts/favorit-regular.ttf') format('ttf'); /* Pretty Modern Browsers */
+    }
+
+    p, ul, li {
+      font-family: 'GTA', 'Helvetica Neue', sans-serif;
+      font-weight: 200;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'GTA',  'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      text-rendering: optimizeLegibility;
+    }
+
+    .font-favorit {
+      font-family: 'Favorit',  'Helvetica Neue', sans-serif;
+      font-weight: 400;
+    }
+
+
+    .headline-prototype {
+      font-size: 14vw;
+    }
+
+    @media screen and (max-width: 1040px) {
+      .headline-prototype {
+        font-size: 10rem;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .headline-prototype {
+        font-size: 20vw;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .headline-prototype {
+        font-size: 4rem;
+      }
+
+      .p {
+        display: inline-block !important;
+      }
+
+    }
+
+    @media screen and (min-width: 375px) {
+
+      .o-2 {
+        margin-right:2rem;
+      }
+    }
+
+    .deep-blue {
+      color: hsla(249, 100%, 40%, 1);
+    }
+
+    .pale-blue {
+      color: hsla(249, 60%, 30%, 1);
+    }
+
+    .purple-blue {
+      color: hsla(249, 70%, 45%, 1);
+    }
+
+    .sky {
+      animation: moveXsky 10.05s linear 0s infinite alternate,
+      moveYsky 10.05s linear 0s infinite alternate;
+
+      }
+
+      @keyframes moveXsky {
+        from { left: 0; } to { left: 85%; }
+      }
+
+      @keyframes moveYsky {
+        from { top: 0%; } to { top: 20%; }
+      }
+
+    .holdinghands {
+      animation: moveXholdinghands 15.05s linear 0s infinite alternate,
+      moveYholdinghands 4.4s linear 0s infinite alternate;
+      }
+
+      @keyframes moveXholdinghands {
+        from { left: 0; } to { left: 85%; }
+      }
+
+      @keyframes moveYholdinghands {
+        from { top: 50%; } to { top: 40%; }
+      }
+
+    .cows {
+      animation: moveXcows 20.05s linear 0s infinite alternate,
+      moveYcows 4.8s linear 0s infinite alternate;
+    }
+
+    @keyframes moveXcows {
+      from { right: -30%; } to { right: 100%; }
+    }
+
+    @keyframes moveYcows {
+      from { top: -10%; } to { top: 60%; }
+    }
+
+    .flower {
+      animation: moveXflower 15.05s linear 0s infinite alternate,
+      moveYflower 20.4s linear 0s infinite alternate;
+    }
+
+    @keyframes moveXflower {
+      from { left: 0; } to { left: 105%; }
+    }
+
+    @keyframes moveYflower {
+      from { top: 0; } to { top: 80%; }
+    }
+
+    .beeman {
+      animation: moveXbeeman 25.05s linear 0s infinite alternate,
+      moveYbeeman 30.4s linear 0s infinite alternate;
+    }
+
+    @keyframes moveXbeeman {
+      from { left: 0%; } to { left: 85%; }
+    }
+
+    @keyframes moveYbeeman {
+      from { top: 8%; } to { top: 90%; }
+    }
+
+    .buzzsaw {
+      animation: moveXbuzzsaw 18.05s linear 0s infinite alternate,
+      moveYbuzzsaw 14.4s linear 0s infinite alternate;
+    }
+
+    @keyframes moveXbuzzsaw {
+      from { right: 0; } to { left: 95%; }
+    }
+
+    @keyframes moveYbuzzsaw {
+      from { bottom: 0; } to { bottom: 20%; }
+    }
+
+    .risingsun {
+      animation: moveXrisingsun 18.05s linear 0s infinite alternate,
+      moveYrisingsun 14.4s linear 0s infinite alternate;
+    }
+
+    @keyframes moveXrisingsun {
+      from { right: 0; } to { left: 95%; }
+    }
+
+    @keyframes moveYrisingsun {
+      from { bottom: 0; } to { top: 50%; }
+    }
+
+    .alert {
+      animation: alert 1s ease-in-out infinite;
+    }
+
+    @keyframes alert {
+      from { transform:translateY(0%); } to { transform:translateY(10%); }
+    }
+
+.bg-soft-pink {
+  background:hsla(324, 100%, 90%, 1);
+}
+
+.bg-soft-orange {
+  background:hsl(36, 100%, 90%);
+}
+
+.p {
+  display: inline-flex;
+  transform:translateY(0%) rotate(-4deg);
+}
+
+.r {
+  display: inline-flex;
+  transform:translateY(0%) rotate(0) skew(3deg, 14deg);
+}
+
+.o {
+  display: inline-flex;
+  transform:skew(-3deg, -10deg);
+
+  letter-spacing: 0rem;
+}
+
+.t {
+  display: inline-flex;
+  transform:translateY(0%) rotate(0deg) skew(3deg, 14deg);
+
+  letter-spacing: 1rem;
+}
+
+.o-2 {
+  display: inline-flex;
+  transform:translateY(10%) rotate(24deg);
+  letter-spacing:-1rem;
+}
+
+.t-2 {
+  display: inline-flex;
+  transform:translateY(-10%) rotate(-6deg) skew(3deg, 3deg);
+  letter-spacing:-1rem;
+}
+
+.y {
+  display: inline-flex;
+  transform:translateY(15.5%) rotate(-6deg);
+}
+
+.p-2 {
+  display: inline-flex;
+  transform:translateY(-16%) rotate(-8deg) skew(-3deg, -14deg);
+}
+
+.e {
+  display: inline-flex;
+  transform:translateY(-15%) rotate(-16deg) skew(3deg, 14deg);
+}
+
+.marquee span {
+  animation: 240s linear 10ms normal forwards infinite running animate-marquee;
+	display: inline-block;
+  padding-right: 20%;
+}
+
+@keyframes animate-marquee {
+	0% {
+		transform: translate3d(0px, 0px, 0px);
+	}
+	100% {
+		transform: translate3d(-100%, 0px, 0px);
+	}
+}
+
+
+    </style>
+
+  </head>
+
+<body class="relative flex w-100 h-100 bg-white pa3">
+
+
+  <section class="relative
+    flex flex-column w-100 items-center justify-start content-start deep-blue hidden" style="overflow:hidden;">
+
+
+    <div class="absolute w-100 h-auto" style="transform:skew(0deg, 20deg);">
+      <div class="relative marquee w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>Prototype</span><span>Prototype</span><span>Prototype</span><span>Prototype</span><span>Prototype</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>IS</span><span>IS</span><span>IS</span><span>IS</span><span>IS</span><span>IS</span><span>IS</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>Prototype</span><span>Prototype</span><span>Prototype</span><span>Prototype</span><span>Prototype</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>Web</span><span>Web</span><span>Web</span><span>Web</span><span>Web</span><span>Web</span><span>Web</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>Residency</span><span>Residency</span><span>Residency</span><span>Residency</span><span>Residency</span><span>Residency</span><span>Residency</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>For</span><span>For</span><span>For</span><span>For</span><span>For</span><span>For</span><span>For</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>Inconsistent</span><span>Inconsistent</span><span>Inconsistent</span><span>Inconsistent</span><span>Inconsistent</span><span>Inconsistent</span><span>Inconsistent</span>
+      </h1>
+      </div>
+      <div class="relative w-100 h-auto hidden" style="white-space:nowrap;">
+      <h1 class="relative deep-blue ttu uppercase mw7 mv0 self-center lh-title o-10" style="top:0px; left:0px; font-size:30rem; z-index:-9; opacity:0.05;">
+        <span>Antagonism</span><span>Antagonism</span><span>Antagonism</span><span>Antagonism</span><span>Antagonism</span><span>Antagonism</span><span>Antagonism</span>
+      </h1>
+      </div>
+
+    </div>
+
+
+
+    <div class="relative flex flex-column w-100 mw7 justify-center lh-copy f3  deep-blue">
+        <img src="sky.jpg" class="sky w4 z-9" style="position: absolute; z-index:-9" />
+
+    <section class="flex flex-column w-100 self-center  justify-around-ns justify-start min-vh-100 bw1 b--gray self-start">
+
+    <h1 class="f-subheadline-ns f2-ns f3 mv0">I am
+    </h1>
+    <h1 class="font-favorit relative flex flex-row f-headline-ns f2 mv0-ns mb5">
+    <span class="headline-prototype relative p ">
+        <span style="transform:skew(3deg, 4deg);">
+          P
+        </span>
+        <span class="relative r">r
+        </span>
+        <span class="o">o</span>
+        <span class="t">t</span>
+        <span class="o-2">o</span>
+        <span class="t-2">t</span>
+        <span class="y">y</span>
+        <span class="p-2">p</span>
+        <span class="e">e</span>,
+    </span>
+    </h1>
+    <h1 class="f2-ns f3 mv0">
+    A tranquil web residency for casual investigations into how we (from people to plants) interface with our planetary computer.</h1>
+    <img src="holdinghands.jpeg" class="holdinghands w4 z-9" style="position: absolute; bottom: 48px; right:48px; z-index: -9;" />
+
+  </section>
+
+  <section class="f3 relative pv4 dark-gray f2">
+  <h2>
+  Our technology has surpassed our comprehension of it.<sup><a class="link pink" href="https://youtu.be/QuEO-iTf4C4?t=34" target="_blank">1</a></sup>
+  </h2>
+
+  <p>
+  We're reasoning with anachronistic metaphors. <span class="o-20">(Digital)</span> Design is mostly a paint-by-numbers affair. Silicon Valley's stigmergy has sapped us of our imagination. Milking dopamine is de rigeur. The Monoculture has emerged.
+  </p>
+  <p>
+  Yet it's not all bad: The memeplex has matured. Strange ideas keep sabotaging the status quo. There are still sublime oases' in cyberspace. You can even have fun, if you know where to look.
+  </p>
+  <p>
+  If you're interested in exploring how we got into this mess, coding your way out of it, engaging in platform dissent, making up words, or just coloring outside the lines, then: welcome. You're one of us.
+  </p>
+
+
+  </section>
+</div>
+
+  <section class="flex flex-column w-100 mw7 justify-start f3 dark-gray lh-copy">
+
+    <section class="relative w-auto  mv5-ns mv2">
+      <h1 class="relative f2 deep-blue">
+      Who can participate?
+      </h1>
+      <span class="content">
+      <p>
+      You. The strength of this project exists in plurality: many people with many ideas, experiences, thoughts and opinions. Everyone is welcome.
+      </p>
+      </span>
+    </section>
+
+    <section class="relative w-auto  mv5-ns mv2">
+      <h1 class="relative f2 deep-blue">
+      What can I create?
+      </h1>
+      <span class="content">
+      <p>
+      All interventions in the internet are valid. Any technical, socio-cultural, historical, geopolitical, ecological or anthropological cross section can be traversed. The canvas is intentionally broad. Have fun. Break preconceptions. Distort bias. Do your thing.
+      </p>
+      <p>
+        Your project could take the form of discordant interfaces<span class="ph3">•</span>
+         ethnographic studies<span class="ph3">•</span>
+          communications in compassion<span class="ph3">•</span> <a class="link hot-pink" href="https://shiba.computer/essay/on-weaponised-design/" target="_blank">
+        critical essays on the status quo<sup class="font-favorit">↗</sup>
+        </a>
+        <span class="ph3">•</span> experiments in space and time
+        <span class="ph3">•</span> <a class="link hot-pink" href="https://www.are.na/lukas-w/ritual-design" target="_blank">ritual design<sup class="font-favorit">↗</sup></a>
+        <span class="ph3">•</span> warping Identity
+        <span class="ph3">•</span> theatre
+        <span class="ph3">•</span> matter-of-fact monologues
+        <span class="ph3">•</span> <a class="link hot-pink" href="https://peer-to-peer-web.com/" target="_blank">hosting offline hangs at being online better<sup class="font-favorit">↗</sup></a>
+        <span class="ph3">•</span> creating new metaphors
+        <span class="ph3">•</span> burning A Pattern Language
+        <span class="ph3">•</span> throwing your phone out the window
+        <span class="ph3">•</span> <a class="link hot-pink" href="https://walking.jon-kyle.com/" target="_blank">walking<sup class="font-favorit">↗</sup>
+        </a>
+        <span class="ph3">•</span> or refining the art of <a class="link hot-pink" href="http://zuckerbergreview.com/" target="_blank">Zuckerbergian Inquiry<sup class="font-favorit">↗</sup></a>
+      </p>
+      </span>
+    </section>
+
+    <section class="relative w-auto  mv5-ns mv2">
+      <h1 class="relative f2 deep-blue">
+      How intensive is it?
+      </h1>
+      <span class="content">
+      <p>
+      Do you have 1 hour a week? Sure, the more time the better but I'm as flexible as you need me to be. My goal is to encourage you to explore a question. Travel as far as you can. Answers are unimportant.
+      </p>
+      </span>
+    </section>
+
+
+  <section class="relative w-100 mv5-ns mv2">
+    <h1 class="f2 deep-blue">
+    How does it work?
+  </h1>
+
+    <ul class="list pl0 mv3">
+      <li class="flex content-center mv3">
+        There are enough casual online communities in the world. Instead, I am a temporary structure to help you ask a question and discover where it takes you.</li>
+      <li class="mv4">
+      <span class="light-red f1">☇</span> I last for 3 months, then fade to black.
+      </li>
+      <li class="mv4">
+      <span class="light-red f1">☇</span> Each week, we'll convene for a chill online hang to break bread, discuss our projects and share feedback.
+      </li>
+      <li class="relative mv4">
+      <span class="light-red f1">☇</span> Between these hangs, we idle in the <span class="blue">#prototype</span> channel on the <a class="hot-pink link" href="https://www.learning-gardens.co" target="_blank">Learning Garden's<sup class="font-favorit">↗</sup></a> slack: a safe space for intermittent conversion and feedback.
+      </li>
+      <li class="mv4">
+      <span class="light-red f1">☇</span> And every two weeks, we'll release a small update to our projects to help build momentum while softly encouraging accountability.
+      </li>
+      <li>
+        <span class="light-red f1">☇</span> At the end, we'll livestream our projects to a captive global audience <span class="o-50">
+      </li>
+    </ul>
+    <ul class="dn list pl0 mv5">
+    <li class="mv4 lh-copy">
+    <span class="light-red">1.</span> Each week we will meet for a chill online hang to share our progress, ask questions and seek feedback.
+    </li>
+    <li class="mv4 lh-copy">
+    <span class="light-red">2.</span> Intermittently, we can ask questions & seek/share feedback via the LG slack.
+    </li>
+    <li class="mv4 lh-copy">
+    <span class="light-red">3.</span> Every 2 weeks we will release a new piece of our project - either an updated version, a new aspect of the total project, the results of your research, a reading list or whatever most suits your endeavor.
+    </li>
+    <li>
+      This is to ensure we build and sustain momentum, and remain accountable to ourselves & each other. After each release, we share our goal/plan for the next release in the following 2 weeks, and so on.
+    </li>
+    </ul>
+    <ul class="dn list pl0 mv5">
+    <li class="mv4 lh-copy">
+    <span class="light-red">*</span>We encourage research and references be published on <a  class="hot-pink" href="https://www.are.na" target="_blank">Are.na<sup class="font-favorit">↗</sup></a> An index channel will collate and organize everyone's contributions.
+    </li>
+    <li class="mv4 lh-copy">
+    <span class="light-red">NB:</span> This is an experiment and all participants are welcome to propose changes. We want to keep this as flat & flexible as possible.
+    </li>
+    </ul>
+  </section>
+
+  <section class="relative mv5-ns mv2">
+
+    <h1 class="f2 deep-blue">
+    Why do you exist?
+  </h1>
+    <p>
+      Many of us are agitating against our new normal.
+    </p>
+    <p>
+      We see the symptoms of our troubles everywhere: our shallow design discourse. The littany of derivative apps. Global attention farming. Cultural homogeneity. An extremist pragmatism that discourages poetics. And so on.
+    </p>
+    <p>
+      An accidental community has emerged to explore new alternatives: they just don't know it. This is an attempt to bring them together.
+    </p>
+  </section>
+
+  <section class="relative mv5-ns mv2">
+
+    <h1 class="f2 deep-blue">
+    When does it start?
+  </h1>
+    <p>
+      January 2019 → April.
+    </p>
+  </section>
+
+  <section class="relative mv5-ns mv2">
+
+    <h1 class="f2 deep-blue">
+    How do I join?
+    </h1>
+    <ul class="list pl0 mv0">
+    <li class="mv0 lh-copy strike">
+    Just head on over to <a class="link hot-pink" href="https://www.are.na/prototype-web-residency/pwr01-submissions" target="_blank">this Are.na channel<sup class="font-favorit">↗</sup></a><span class="alert light-red"> before January 7 2019</span> and add a text block with the following information:
+    </li>
+    <li class="mv4 lh-copy">
+    <span class="light-red">1.</span> The name of your project
+    </li>
+    <li class="mv4 lh-copy">
+    <span class="light-red">2.</span> A two sentence outline.
+    </li>
+    <li class="mv4 lh-copy">
+    <span class="light-red">3.</span> What you want to have at the end of the 3 months (a document, a functional prototype, a dysfunctional prototype, some complicated drawings on blue technical paper, etc.)
+    </li>
+    <li class="mv4 lh-copy">
+    <span class="light-red">4.</span> The email address you want the Learning Gardens slack invite to be sent to (if you're not a member already)
+    </li>
+    </ul>
+  </section>
+
+</section>
+
+</section>
+</body>
+
+</html>
