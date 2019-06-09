@@ -51,25 +51,6 @@ All submissions are accepted. For PWR01 they were submitted [into an open Are.na
 4. Your email address (to help organize the weekly residency calls)
 ```
 
-
-
-## Code of Conduct
-For PWR1, our Code of Conduct was:
-
-```
-I shouldn’t have to write this, but just in case:
-
-Let’s act with maturity, respect & compassion to one another. 
-
-Criticism is an essential part of developing our projects and discovering new paths, but it should be communicated constructively. 
-
-Debate is welcome when it’s engaged in respectfully.
-
-Negative behavior gets you a warning.
-
-Harassment of any kind gets you ejected. 👋 
-```
-
 ---
 
 # Structure & Process
@@ -132,6 +113,26 @@ Each week on Monday (ideally) a weekly email is sent to all residents with:
 1. A schedule for that week's calls, showing who is speaking with who.
 2. Any requests or messages that resident's wish to have broadcasted to the rest of the group (which are either emailed ahead of time to the Moderator or submitted via a chat program if you're using one).
 
+
+
+## Code of Conduct
+For PWR1, our Code of Conduct was:
+
+```
+I shouldn’t have to write this, but just in case:
+
+Let’s act with maturity, respect & compassion to one another. 
+
+Criticism is an essential part of developing our projects and discovering new paths, but it should be communicated constructively. 
+
+Debate is welcome when it’s engaged in respectfully.
+
+Negative behavior gets you a warning.
+
+Harassment of any kind gets you ejected. 👋 
+```
+
+
 ---
 
 # Tools
@@ -162,4 +163,8 @@ It's flexibility and simplicity make it an ideal candidate to use to manage your
 [Prototype Primer document](https://paper.dropbox.com/doc/Prototype-Primer--AezQWk1BpM9KdVEVxuVO_79fAQ-iGp4jOnutxUIBtS78WYY8)
 
 [Are.na channels](https://www.are.na/prototype-web-residency/)
+
+## Questions?
+
+Submit an issue or [message me on twitter](https://www.twitter.com/automaticyes)
 
